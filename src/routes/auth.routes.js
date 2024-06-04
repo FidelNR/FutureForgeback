@@ -1,7 +1,12 @@
 import { Router } from "express";
-import {login, dashboard, fill, users} from '../controllers/auth.controller.js'
+import {login, dashboard, fill, users, listworker, obtworker} from '../controllers/auth.controller.js'
 
 const router = Router()
+
+
+router.post('/worker', listworker)
+
+router.get('/recuworker', obtworker)
 
 router.get('/dashboard', dashboard)
 
